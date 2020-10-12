@@ -1,9 +1,11 @@
 var m = moment();
-var month = m.get('month');
-var date = m.get('date');
+var month = m.format('MMM');
+var date = m.format('Mo');
 var day = m.format('dddd');
+var year = m.format('YYYY');
 var hour = m.get('hour');
-var year = m.get('year');
 var minute = m.get('minute');
+var dateTime = m.format("LLLL");
 
-$("#currentDay").text(day).append("<br/>" + month + "/" + date + "/" + year);
+$("#currentDay").text(dateTime);
+
