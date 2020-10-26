@@ -9,3 +9,13 @@ var dateTime = m.format("LLLL");
 
 // Display the current day on top of the page
 $("#currentDay").text(dateTime);
+
+
+$(document).ready(() => {
+    $(".saveBtn").click(() => {
+        var taskInput = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+
+        localStorage.setItem(taskInput, time);
+    })
+})
