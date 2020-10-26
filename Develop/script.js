@@ -23,6 +23,24 @@ $(document).ready(() => {
     for (let i = 0; i <= 8; i++) {
         $(i + "-hour .description").val(localStorage.getItem(i = "-hour"))
     }
+    // Helper
+    function trackTime() {
+        for (let i = 9; i <= 17; i++) {
+            if ($(".row").attr("id", i) < hour) {
+                $(".row").addClass("past");
+                $(".row").removeClass("future");
+                $(".row").removeClass("present");
+            } else if ($(".row").attr("id", i) === hour) {
+                $(".row").removeClass("past");
+                $(".row").addClass("future");
+                $(".row").removeClass("present");
+            } else if ($(".row").attr("id", i) > hour) {
+                $(".row").removeClass("past");
+                $(".row").removeClass("future");
+                $(".row").addClass("present");
+            }
 
-
+        }
+    }
+    trackTime();
 });
