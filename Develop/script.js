@@ -17,5 +17,12 @@ $(document).ready(() => {
         var time = $(this).parent().attr("id");
 
         localStorage.setItem(taskInput, time);
-    })
-})
+    });
+
+    // loop through the local storage for any saved tasks
+    for (let i = 0; i <= 8; i++) {
+        $(i + "-hour .description").val(localStorage.getItem(i = "-hour"))
+    }
+
+
+});
