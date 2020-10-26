@@ -13,41 +13,33 @@ console.log(todos);
 // Display the current day on top of the page
 $("#currentDay").text(dateTime);
 // Create table in container
-function renderTodos() {
-    // render new row for each todo
-    for (let i = 0; i < todos.length; i++) {
-        // create a variable to hold each to do
-        var todo = todos[i];
-        // create a tr element
-        var trEl = document.createElement("tr");
-        // create an element to hold the time slots
-        var timeEl = document.createElement("td");
-        // insert the time slot
-        timeEl.textContent = todo;
-        timeEl.setAttribute("id", "time-hour")
-        // set an attribute to later compare
-        var button = document.createElement("button");
-        // add the word done to each button
-        button.textContent = "Done";
-        // append the button to the time element
-        var inputEl = document.createElement("input");
-        inputEl.setAttribute("name", "todo-text");
-        inputEl.setAttribute("id", "todo-text");
-        timeEl.appendChild(inputEl);
-        timeEl.appendChild(button)
-        // append the time element to the tr
-        trEl.appendChild(timeEl);
-        // append the tr to the to do list
-        $(".todoList").append(trEl);
-    }
-}
-// function renderForm() {
-//     var formEl = document.createElement("form")
-//     var inputEl = document.createElement("input");
-//     inputEl.setAttribute("name", "todo-text");
-//     inputEl.setAttribute("id", "todo-text");
-//     formEl.appendChild(inputEl);
-//     $("#time-hour").append(formEl);
+// function renderTodos() {
+//     // render new row for each todo
+//     for (let i = 0; i < todos.length; i++) {
+//         // create a variable to hold each to do
+//         var todo = todos[i];
+//         // create a tr element
+//         var trEl = document.createElement("tr");
+//         // create an element to hold the time slots
+//         var timeEl = document.createElement("td");
+//         // insert the time slot
+//         timeEl.textContent = todo;
+//         timeEl.setAttribute("id", "time-hour")
+//         // set an attribute to later compare
+//         var button = document.createElement("button");
+//         // add the word done to each button
+//         button.textContent = "Done";
+//         // append the button to the time element
+//         var inputEl = document.createElement("textarea");
+//         inputEl.setAttribute("name", "todo-text");
+//         inputEl.setAttribute("class", "todo-text");
+//         timeEl.appendChild(inputEl);
+//         timeEl.appendChild(button)
+//         // append the time element to the tr
+//         trEl.appendChild(timeEl);
+//         // append the tr to the to do list
+//         $(".todoList").append(trEl);
+//     }
 // }
 
 
