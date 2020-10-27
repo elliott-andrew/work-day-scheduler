@@ -8,7 +8,7 @@
 
   ## Table of Contents
   - [Usage](#Usage)
-  - [Installation](#Installation)
+  - [Website](#Website)
   - [License](#License)
   - [Questions](#Questions)
 
@@ -16,8 +16,8 @@
   ![screenshot](https://raw.githubusercontent.com/elliott-andrew/work-day-scheduler/main/Assets/Screen%20Shot%202020-10-27%20at%202.33.58%20PM.png)
 
 
-  ## Installation
-  This is a web application. 
+  ## Website
+  [https://elliott-andrew.github.io/work-day-scheduler/](https://elliott-andrew.github.io/work-day-scheduler/)
 
   ## License
   MIT License
