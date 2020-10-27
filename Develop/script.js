@@ -10,12 +10,14 @@ var dateTime = m.format("LLLL");
 // Display the current day on top of the page
 $("#currentDay").text(dateTime);
 
-
+// listener for the save button
 $(document).ready(() => {
     $(".saveBtn").click(() => {
+        // set the task
         var taskInput = $(this).siblings(".description").val();
+        // set the time
         var time = $(this).parent().attr("id");
-
+        // store the task and time
         localStorage.setItem(taskInput, time);
     });
 
