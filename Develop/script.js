@@ -30,24 +30,28 @@ $(document).ready(() => {
     // Helper
     function trackTime() {
         // pull each text area
-        $("textarea").each(() => {
-            // if the time is less than the current hour
-            if ($("textarea").attr("id") < hour) {
-                $(".row").addClass("past");
-                $(".row").removeClass("future");
-                $(".row").removeClass("present");
-                // if the time is equal to the current hour
-            } else if ($("textarea").attr("id", i) === hour) {
-                $(".row").removeClass("past");
-                $(".row").addClass("future");
-                $(".row").removeClass("present");
-                // if the time is greate than the current hour
-            } else if ($("textarea").attr("id", i) > hour) {
-                $(".row").removeClass("past");
-                $(".row").removeClass("future");
-                $(".row").addClass("present");
-            }
-        })
+        for (let i = 9; i <= 17; i++) {
+            console.log(i)
+            console.log($("#" + i))
+        }
+        // $("textarea").each(() => {
+        //     // if the time is less than the current hour
+        //     if ($("textarea").attr("id") < hour) {
+        //         $(".row").addClass("past");
+        //         $(".row").removeClass("future");
+        //         $(".row").removeClass("present");
+        //         // if the time is equal to the current hour
+        //     } else if ($("textarea").attr("id", i) === hour) {
+        //         $(".row").removeClass("past");
+        //         $(".row").addClass("future");
+        //         $(".row").removeClass("present");
+        //         // if the time is greate than the current hour
+        //     } else if ($("textarea").attr("id", i) > hour) {
+        //         $(".row").removeClass("past");
+        //         $(".row").removeClass("future");
+        //         $(".row").addClass("present");
+        //     }
+        // })
     }
     trackTime();
 });
