@@ -14,7 +14,6 @@ $(document).ready(() => {
         var time = $(this).parent().attr("id");
         localStorage.setItem(time, userTask);
     });
-
     // loop through the local storage for any saved tasks and populate them on the page
     for (let i = 9; i <= 17; i++) {
         $("#" + i + "-hour .description").val(localStorage.getItem(i + "-hour"))
