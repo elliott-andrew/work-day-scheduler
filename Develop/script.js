@@ -23,24 +23,28 @@ $(document).ready(() => {
     for (let i = 0; i <= 8; i++) {
         $(i + "-hour .description").val(localStorage.getItem(i = "-hour"))
     }
+
     // Helper
     function trackTime() {
-        for (let i = 9; i <= 17; i++) {
-            if ($(".row").attr("id", i) < hour) {
+        // pull each text area
+        $("textarea").each(() => {
+            // if the time is less than the current hour
+            if ($("textarea").attr("id") < hour) {
                 $(".row").addClass("past");
                 $(".row").removeClass("future");
                 $(".row").removeClass("present");
-            } else if ($(".row").attr("id", i) === hour) {
+                // if the time is equal to the current hour
+            } else if ($("textarea").attr("id", i) === hour) {
                 $(".row").removeClass("past");
                 $(".row").addClass("future");
                 $(".row").removeClass("present");
-            } else if ($(".row").attr("id", i) > hour) {
+                // if the time is greate than the current hour
+            } else if ($("textarea").attr("id", i) > hour) {
                 $(".row").removeClass("past");
                 $(".row").removeClass("future");
                 $(".row").addClass("present");
             }
-
-        }
+        })
     }
     trackTime();
 });
