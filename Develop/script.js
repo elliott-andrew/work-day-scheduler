@@ -1,3 +1,4 @@
+// date and time for moment.js to use
 var m = moment();
 var month = m.format('MMM');
 var date = m.format('Mo');
