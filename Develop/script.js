@@ -29,29 +29,23 @@ $(document).ready(() => {
 
     // Helper
     function trackTime() {
-        // pull each text area
+        // loop through every possible hour (9 - 17)
         for (let i = 9; i <= 17; i++) {
-            console.log(i)
-            console.log($("#" + i))
+            // pull every coorisponding text area
+            let timeBlock = document.getElementById(i);
+            // if the text area id is equal to the current hour change class
+            if (i === hour) {
+                timeBlock.className += " present";
+                // if the texa area is greater than the current hour change class
+            } else if (i > hour) {
+                timeBlock.className += " future";
+                // if the text area is less than the current hour change class
+            } else if (i < hour) {
+                timeBlock.className += " past";
+            }
         }
-        // $("textarea").each(() => {
-        //     // if the time is less than the current hour
-        //     if ($("textarea").attr("id") < hour) {
-        //         $(".row").addClass("past");
-        //         $(".row").removeClass("future");
-        //         $(".row").removeClass("present");
-        //         // if the time is equal to the current hour
-        //     } else if ($("textarea").attr("id", i) === hour) {
-        //         $(".row").removeClass("past");
-        //         $(".row").addClass("future");
-        //         $(".row").removeClass("present");
-        //         // if the time is greate than the current hour
-        //     } else if ($("textarea").attr("id", i) > hour) {
-        //         $(".row").removeClass("past");
-        //         $(".row").removeClass("future");
-        //         $(".row").addClass("present");
-        //     }
-        // })
+
     }
+
     trackTime();
 });
